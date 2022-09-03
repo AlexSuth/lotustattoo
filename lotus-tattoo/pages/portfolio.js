@@ -1,6 +1,6 @@
 export default function Portfolio() {
     return (
-        <div>
+        <div className="text-white">
             Portfolio Goes Here
         </div>
     )

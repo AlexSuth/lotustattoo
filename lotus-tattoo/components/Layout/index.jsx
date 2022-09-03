@@ -1,12 +1,13 @@
 import Footer from '../Footer';
 import NavBar from '../NavBar';
-import React from 'react';
 
 export default function Layout({ children }) {
   return (
-    <div className="layoutRoot">
+    <div className='bg-black flex flex-col h-screen justify-between'>
       <NavBar />
-      {children}
+      <div className='flex justify-center items-center'>
+        {children}
+      </div>
       <Footer />
     </div>
   );

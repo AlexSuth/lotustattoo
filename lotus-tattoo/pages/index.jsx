@@ -1,26 +1,26 @@
-export default function Home({tattoos}) {
+export default function Home({ tattoos }) {
   return (
-    <div>
+    <div className="text-white">
       <h1>
         NextJs Wordpress Test
       </h1>
       {
         tattoos.nodes.map(tattoo => {
-          return(
+          return (
             <ul key={tattoo.slug}>
               <li>
                 {tattoo.tattooTitle}
               </li>
             </ul>
-          )
+          );
         })
       }
     </div>
-  )
+  );
 }
 
 export async function getStaticProps() {
-   
+
   const res = await fetch('http://alexanders80.sg-host.com/graphql', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -44,12 +44,12 @@ export async function getStaticProps() {
       }
       `,
     })
-  })
-   
-   const json = await res.json()
-   return {   
+  });
+
+  const json = await res.json();
+  return {
     props: {
-        tattoos: json.data.tattoos
-      },
-   }
+      tattoos: json.data.tattoos
+    },
+  };
 }

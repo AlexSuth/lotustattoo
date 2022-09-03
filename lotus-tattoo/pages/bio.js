@@ -1,6 +1,6 @@
 export default function Bio() {
     return (
-        <div>
+        <div className="text-white">
             Bio goes here
         </div>
     )
