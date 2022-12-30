@@ -12,32 +12,9 @@ export default function NavBar() {
 
   return (
     <div className="">
-      <nav>
-        <Link href="/">
-          <a>
-            Home
-          </a>
-        </Link>
-        <Link href="/bio">
-          <a>
-            Bio
-          </a>
-        </Link>
-        <Link href="/portfolio">
-          <a>
-            Portfolio
-          </a>
-        </Link>
-        <Link href="/appointments">
-          <a>
-            Appointments
-          </a>
-        </Link>
-      </nav>
-
       {/* Logo */}
-      <header className="bg-inheret">
-        <div className="px-4 mx-auto max-w-screen-xl sm:px-6 lg:px-8">
+      <header className="bg-inheret w-full">
+        <div className="px-4 mx-auto w-full sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex-1 md:flex md:items-center md:gap-12">
               <Link href='/'>
@@ -130,8 +107,8 @@ export default function NavBar() {
 
           {showMobileNav ?
             (
-              <ul>
-                <nav className="absolute md:hidden flex flex-col mt-4 text-sm text-gray-500 space-y-2">
+              <div className="absolute md:hidden flex z-10  bg-black flex-col  text-sm text-gray-500">
+                <ul className='w-full'>
                   <li>
                     <Link href="/">
                       <a
@@ -169,8 +146,8 @@ export default function NavBar() {
                       </a>
                     </Link>
                   </li>
-                </nav>
-              </ul>
+                </ul>
+              </div>
             ) :
             <></>
           }
